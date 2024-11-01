@@ -2,7 +2,9 @@ package com.hotel.payment_service.mappers;
 
 import com.hotel.payment_service.dtos.PaymentDto;
 import com.hotel.payment_service.entities.Payment;
+import org.springframework.stereotype.Component;
 
+@Component
 public class PaymentMapper {
 
     public PaymentDto fromPaymentEntitytoPaymentDto(Payment payment) {

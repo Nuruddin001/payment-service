@@ -2,6 +2,7 @@ package com.hotel.payment_service.entities;
 
 import com.fasterxml.jackson.annotation.JsonTypeId;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import lombok.Data;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -14,6 +15,7 @@ import java.util.UUID;
 public class Payment {
 
     @Id
+    @GeneratedValue(generator = "UUID")
     private UUID id;
     private Date paymentDate;
     private String paymentStatus;
